@@ -6,6 +6,7 @@ import { loggerMiddleware } from './common/middlewares/logger.middleware';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
+import { CommentsModule } from './comments/comments.module';
 import * as mongoose from 'mongoose';
 
 @Module({
@@ -17,6 +18,7 @@ import * as mongoose from 'mongoose';
       useUnifiedTopology: true,
     }),
     AuthModule,
+    CommentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

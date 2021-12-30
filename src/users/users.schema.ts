@@ -1,3 +1,4 @@
+import { Comments } from './../comments/comments.schema';
 import { Prop, Schema, SchemaFactory, SchemaOptions } from '@nestjs/mongoose';
 import { ApiProperty } from '@nestjs/swagger';
 import { IsBoolean, IsEmail, IsString } from 'class-validator';
@@ -58,16 +59,30 @@ export class User extends Document {
     id: string;
     name: string;
     imgUrl: string;
+    comments: Comments[];
   };
+
+  readonly comments: Comments[];
 }
 
-export const UserSchema = SchemaFactory.createForClass(User);
+const _UserSchema = SchemaFactory.createForClass(User);
 
-UserSchema.virtual('readOnlyData').get(function (this: User) {
+_UserSchema.virtual('readOnlyData').get(function (this: User) {
   return {
     email: this.email,
     id: this.id,
     name: this.name,
     imgUrl: this.imgUrl,
+    comments: this.comments,
   };
 });
+
+_UserSchema.virtual('comments', {
+  ref: 'comments',
+  localField: '_id',
+  foreignField: 'info',
+});
+_UserSchema.set('toObject', { virtuals: true });
+_UserSchema.set('toJSON', { virtuals: true });
+
+export const UserSchema = _UserSchema;
