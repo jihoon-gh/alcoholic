@@ -13,4 +13,7 @@
       <li>upload Img</li>
       <li>comment and likeCount</li>
     </ul>
+    
+    
+    <h3> thx for watching this :D </h3>
 </html>
