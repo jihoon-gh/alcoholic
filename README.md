@@ -6,7 +6,7 @@
 <body>
   
   <h1> this is my first web-project </h1>
-  <h2> (only backend is provided) <h2>
+  <h2> (only backend files are provided) <h2>
    
   <br>
   <h2>It can..<h2>
