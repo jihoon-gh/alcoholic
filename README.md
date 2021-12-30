@@ -17,6 +17,6 @@
       <li>comment and likeCount</li>
     </ul>
     
-    <h3> thx for watching this :D </h3>
+    thx for watching this :D 
 </body>   
 </html>
