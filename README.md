@@ -2,7 +2,9 @@
 <head>
   <meta charset = "utf-8">  
 </head>
+
 <body>
+  
   <h1> this is my first web-project </h1>
   <h2> (only backend is provided) <h2>
    
@@ -15,7 +17,6 @@
       <li>comment and likeCount</li>
     </ul>
     
-    
     <h3> thx for watching this :D </h3>
-    </body>   
+</body>   
 </html>
